@@ -1,0 +1,16 @@
+TODOS:
+
+Backend -
+  Modelos - LISTO
+  REST API - LISTO
+  Manejo de Http responses - LISTO
+  Subir a git -
+  Crear contenedor docker
+  Seedear base (recordar hacer en docker) -
+  
+
+
+
+
+
+Frontend -

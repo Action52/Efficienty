@@ -25,18 +25,15 @@ from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
 from quickstart import views
+from quickstart import urls
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'comments', views.CommentViewSet)
-router.register(r'experience', views.ExperienciaLaboralViewSet)
-router.register(r'projects', views.ProjectViewSet)
-router.register(r'skills', views.SkillViewSet)
-router.register(r'leadership', views.LeadershipViewSet)
 
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^', include(urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework'))
 ]

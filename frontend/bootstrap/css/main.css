@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("../../img/fondoTech.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax {
+    background-color: rgba(191, 191, 191, 0.8);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background {
+  /*background-image: url("../../img/fondo.jpg");*/
+}
+
+.info-box {
+  background-color: rgba(191, 191, 191, 1);
+  border-radius: 10px;
+}
+
+.comment-box {
+  background-color: rgba(191, 191, 191, 1);
+  border-radius: 3px;
+}
+
+.comment-box:hover {
+  background-color: rgba(100, 100, 100, 1);
+}
+
+.img-cv {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.img-cv:hover{
+  background-color: rgba(10,10,10, 0.7);
+  border-radius: 10px;
+}

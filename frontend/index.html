@@ -1,0 +1,134 @@
+<html>
+  <!--HEAD!-->
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/main.css" />
+    <link rel="" type="text/javascript" href="bootstrap/js/bootstrap.js" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src ="app/comment.js"></script>
+    <script src ="app/experiencialaboral.js"></script>
+    <script src ="app/project.js"></script>
+    <script src ="app/skill.js"></script>
+    <script src ="app/leadership.js"></script>
+  </head>
+
+
+  <!--BODY!-->
+  <body onload=getCommentList()>
+    <div id="mainContainer" class="container-fluid">
+      <div id="pageTitle" class="jumbotron text-center sticky-top">
+          <strong><h1 class ="display-4">Luis Alfredo León Villapún</h1></strong>
+          <hr />
+          <div class ="row">
+            <div class="col-md-1" id="comentariosLink">
+              <button onClick ="goToMenu()" class="btn-lg btn-primary">Menu</button>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+            <div class="col-md-1" id="MenuLink">
+              <button onClick ="goToComments()" class="btn-lg btn-primary">Comentarios</button>
+            </div>
+          </div>
+          <hr />
+      </div>
+
+      <div class="row bg">
+        <div class ="col-md-1">
+
+        </div>
+        <div class="col-md-3 info-box">
+          <div class="">
+            <center>
+              <h3><strong>Información básica</strong></h3>
+            </center>
+          </div>
+          <br />
+
+          <center><img src = "img/yo.jpg" class="img-fluid img-rounded img-cv"/></a></center>
+          <br />
+          <div class="">
+            <h5><strong>Nombre: </strong>Luis Alfredo León Villapún</h5>
+            <h5><strong>Carrera: </strong>Ingeniero en Tecnologías Computacionales</h5>
+            <h5><strong>Correo electrónico: </strong>leonvillapun@gmail.com</h5>
+            <h5><strong>Celular: </strong> 2224464882 </h5>
+          </div>
+
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5 info-box">
+          <br />
+          <div class ="row" id="experiences">
+
+          </div>
+          <div class ="row" id="projects">
+
+          </div>
+          <div class ="row" id="skills">
+
+          </div>
+          <div class ="row" id="leadership">
+
+          </div>
+          <div class ="row" id="menu">
+            <div class="col-md-6">
+              <center>
+                <img src = "img/experience.png" onClick ="getExperienciaList()" class="img-fluid img-cv"/></a>
+              </center>
+            </div>
+            <div class=col-md-6>
+              <center>
+                <img src = "img/portfolio.png" onClick ="getProjectList()" class="img-fluid img-cv"/></a>
+              </center>
+            </div>
+          </div>
+          <br />
+          <div class ="row" id="menu2">
+            <div class="col-md-6">
+              <center>
+                <img src = "img/skill.png" onClick ="getSkillList()" class="img-fluid img-cv"/></a>
+              </center>
+            </div>
+            <div class=col-md-6>
+              <center>
+                <img src = "img/leader.png" onClick ="getLeadershipList()" class="img-fluid img-cv"/></a>
+              </center>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class ="col-md-1">
+
+        </div>
+
+
+    </div>
+    <hr />
+    <!--SECCION COMENTARIOS!-->
+    <section id="comentarios">
+      <div class="row" id="agregarComentario">
+        <div class="col-md-4">
+          <h1>Comentarios</h1>
+        </div>
+        <div class="col-md-8">
+          <h1>Algunos visitantes han escrito...</h1>
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="nickname" placeholder="Nickname" class="form-control"/>
+          <br />
+          <textarea id="comment" rows ="3" placeholder="Comment" class="form-control"></textarea>
+          <br /><button name ="createComment" id="createComment" onClick ="addComment()" class="btn btn-primary">Agregar</button>
+        </div>
+        <div class="col-md-8" id="listaComentarios">
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+  </body>
+</html>
