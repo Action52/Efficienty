@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from quickstart import views
-
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^comments/$', views.comment_list),
