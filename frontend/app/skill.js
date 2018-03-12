@@ -18,10 +18,11 @@ function getSkillList()
 {
   try
   {
+     $("#skills").empty();
      //Peticion ajax al backend
      jQuery.ajax({
            type: "GET", //List all the comments
-           url: "http://localhost:8000/skills/",
+           url: "http://18.217.204.145/skills/",
            success: function (response) {
              skills = response;
              //Create table headers

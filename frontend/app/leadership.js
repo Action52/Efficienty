@@ -18,10 +18,11 @@ function getLeadershipList()
 {
   try
   {
+     $("#leadership").empty();
      //Peticion ajax al backend
      jQuery.ajax({
            type: "GET", //List all the comments
-           url: "http://localhost:8000/leadership/",
+           url: "http://18.217.204.145/leadership/",
            success: function (response) {
              leaderships = response;
              //Create table headers

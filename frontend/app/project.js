@@ -21,10 +21,11 @@ function getProjectList()
 {
   try
   {
+     $("#projects").empty();
      //Peticion ajax al backend
      jQuery.ajax({
            type: "GET", //List all the comments
-           url: "http://localhost:8000/projects/",
+           url: "http://18.217.204.145/projects/",
            success: function (response) {
              projects = response;
              //Create table headers

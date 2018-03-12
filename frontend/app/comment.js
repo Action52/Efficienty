@@ -3,6 +3,8 @@
   Fecha de creación: 9/3/2018
 */
 
+var urlRest = "http://18.217.204.145/comments/";
+
 function CommentObject(myNickname, myComment) {
 
     this.nickname = myNickname;
@@ -12,7 +14,7 @@ function CommentObject(myNickname, myComment) {
 };
 
 function goToComments(){
-  window.location = "index.html#comentarios";
+  window.location = "/#comentarios";
 }
 
 function goToMenu(){
@@ -37,7 +39,7 @@ function addComment()
 
   	 jQuery.ajax({
            type: "POST",
-           url: "http://localhost:8000/comments/",
+           url: urlRest,
            data: myData.toJsonString(), //Lo convertimos a json para que el back lo reciba así
            success: function (response) {
                 $("#listaComentarios").empty();
@@ -66,10 +68,11 @@ function getCommentList()
 {
   try
   {
+     $("#listaComentarios").empty();
      //Peticion ajax al backend
      jQuery.ajax({
            type: "GET", //List all the comments
-           url: "http://localhost:8000/comments/",
+           url: urlRest,
            success: function (response) {
 
              comments = response;

@@ -21,10 +21,11 @@ function getExperienciaList()
 {
   try
   {
+     $("#experiences").empty();
      //Peticion ajax al backend
      jQuery.ajax({
            type: "GET", //List all the comments
-           url: "http://localhost:8000/experience/",
+           url: "http://18.217.204.145/experience/",
            success: function (response) {
                 experiences = response;
                 //Create table headers
